@@ -51,10 +51,20 @@ export class LoginComponent implements OnInit {
       this.authServices.getAuthToken(this.param).then(
         res => {
           if(res){
+            console.log(res);
+            
             const newToken = new Auths;
             newToken.token = this.param.accessToken
             this.store.dispatch(new AuthAction.SaveToken(newToken.token));
+           
           }          
+        }
+      ).then(
+        () => {
+          let timeout = 1000
+          setTimeout(() => {            
+            this.router.navigate(['/subject']);
+          }, timeout);
         }
       )
     }    

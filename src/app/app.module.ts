@@ -22,10 +22,12 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { authReducer } from 'src/ngRx/auth.reducer';
+import { SubjectComponent } from './pages/subject/subject.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SubjectComponent
   ],
   imports: [
     BrowserModule,

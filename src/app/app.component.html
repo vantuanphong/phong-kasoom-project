@@ -1,4 +1,10 @@
-<mat-toolbar>
+<p>
+  <mat-toolbar class="tool-bar">
+
   <span>Kasoom</span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with logout icon" *ngIf="token.token != ''" (click)="logout()">
+   <mat-icon>logout</mat-icon>
+ </button>
 </mat-toolbar>
+</p>
 <router-outlet></router-outlet>
